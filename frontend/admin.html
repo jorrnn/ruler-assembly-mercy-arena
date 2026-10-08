@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | RULER ASSEMBLY Mercy Arena</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <div id="loginView" class="auth-screen">
+    <div class="auth-card">
+      <div class="brand-mark">RA</div>
+      <p class="eyebrow">RULER ASSEMBLY MERCY ARENA</p>
+      <h1>Admin Dashboard</h1>
+      <p class="muted">Sign in to view visitor information, prayer requests and messages.</p>
+      <form id="loginForm">
+        <label>Username<input id="username" autocomplete="username" required></label>
+        <label>Password<input id="password" type="password" autocomplete="current-password" required></label>
+        <button class="primary" type="submit">Sign In →</button>
+        <p id="loginMessage" class="message"></p>
+      </form>
+      <a class="back-link" href="/">← Back to website</a>
+    </div>
+  </div>
+
+  <div id="dashboardView" class="dashboard hidden">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">RULER ASSEMBLY MERCY ARENA</p>
+        <h1>Church Admin Dashboard</h1>
+      </div>
+      <div class="top-actions">
+        <a href="/" target="_blank">View Website ↗</a>
+        <button id="refreshBtn">Refresh</button>
+        <button id="logoutBtn" class="logout">Logout</button>
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="stats-grid">
+        <article class="stat"><span>Total</span><strong id="totalCount">0</strong><small>All submissions</small></article>
+        <article class="stat"><span>Visits</span><strong id="visitCount">0</strong><small>Plan-a-visit requests</small></article>
+        <article class="stat"><span>Prayer</span><strong id="prayerCount">0</strong><small>Prayer requests</small></article>
+        <article class="stat"><span>Messages</span><strong id="messageCount">0</strong><small>Contact messages</small></article>
+      </section>
+
+      <div id="dashboardMessage" class="dashboard-message"></div>
+
+      <section class="panel">
+        <div class="panel-heading"><div><p class="eyebrow">PEOPLE COMING TO CHURCH</p><h2>Visit Requests</h2></div><span id="visitBadge" class="badge">0</span></div>
+        <div id="visitsTable" class="table-wrap"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading"><div><p class="eyebrow">STANDING WITH PEOPLE</p><h2>Prayer Requests</h2></div><span id="prayerBadge" class="badge">0</span></div>
+        <div id="prayersTable" class="table-wrap"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading"><div><p class="eyebrow">MESSAGES</p><h2>Contact Messages</h2></div><span id="messageBadge" class="badge">0</span></div>
+        <div id="messagesTable" class="table-wrap"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

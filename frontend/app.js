@@ -38,13 +38,22 @@ async function loadEvents(){
   const list = $('#eventsList');
   try{
     const events = await fetch('/api/events').then(r => r.json());
-    list.innerHTML = events.map(e => `<article class="event"><div class="event-date">${e.date}</div><div><h3>${e.title}</h3><p>${e.time} • ${e.location}</p></div><span class="event-category">${e.category}</span></article>`).join('');
-  }catch{ list.innerHTML = '<div class="loading">Events could not be loaded.</div>'; }
+    list.innerHTML = events.map(e => `<article class="event"><div class="event-date">${e.date}</div><div><h3>${e.title}</h3><p>${e.time}</p></div></article>`).join('');
+  }catch (error) {
+    console.error('Error loading events:', error);
+
+    list.innerHTML = `
+        <div class="loading">
+            Our events are temporarily unavailable.
+            Please check back soon.
+        </div>
+    `;
+}
 }
 loadEvents();
 
-$('#playSermon').addEventListener('click', () => showToast('Sermon player ready — connect this button to your YouTube or video URL.'));
-$('#watchBtn').addEventListener('click', () => showToast('Add your sermon video link in app.js to make this button open the video.'));
+// $('#playSermon').addEventListener('click', () => showToast('Sermon player ready — connect this button to your YouTube or video URL.'));
+// $('#watchBtn').addEventListener('click', () => showToast('Add your sermon video link in app.js to make this button open the video.'));
 
 const observer = new IntersectionObserver(entries => entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('visible'); }), {threshold:.12});
 $$('.reveal').forEach(el => observer.observe(el));

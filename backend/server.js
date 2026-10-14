@@ -34,9 +34,17 @@ function saveSubmissions(data) {
 }
 
 const events = [
-  { id: 1, title: 'Sunday Celebration Service', date: 'Every Sunday', time: '8:00 AM & 10:30 AM', category: 'Worship', location: 'Mercy Arena Main Auditorium' },
-  { id: 2, title: 'Night of Mercy & Miracles', date: 'Friday, 7:00 PM', time: '7:00 PM', category: 'Prayer', location: 'Mercy Arena' },
-  { id: 3, title: 'Youth Impact Gathering', date: 'Saturday, 4:00 PM', time: '4:00 PM', category: 'Youth', location: 'Mercy Arena Youth Hall' }
+  { id: 1, title: 'Covenant Worship Service', date: 'Every Sunday', time: '8:00 AM - 11:00 AM', category: 'Worship', location: 'Mercy Arena Main Auditorium' },
+  { id: 2, title: 'Bible Study and Prayer Meeting', date: 'Wednesday, 5:00 PM', time: '5:00 PM - 6:30 PM', category: 'Prayer', location: 'Mercy Arena' },
+  { id: 3, title: 'First day of every month, Destiny morning, 5 a.m. to 6 a.m. In bracket, house prayers for every member of Rulers Assembly, bracket closed.', date: 'First Day of the Month', time: '6:00 AM'},
+  { id: 4, title: 'Every first Saturday, Divine Encounter Service. We engage in prayer and fasting', date: 'Every First Saturday', time: '9:00 AM - 12 PM'},
+  { id: 5, title: 'Two weeks of annual spiritual emphasis, prayer and fasting, every September.', date: 'Every September', time: '6:00 AM'},
+  { id: 6, title: 'Hosanna Service, the last Sunday of September.', date: 'Last Sunday of September', time: '8:00 AM'},
+  { id: 7, title: 'Rulers Assembly annual convention July every year.', date: 'Every July', time: '8:00 AM'},
+  { id: 8, title: 'Annual women convention, August every year.', date: 'Every August', time: '8:00 AM'},
+  { id: 9, title: 'annual men convention, November every year.', date: 'Every November', time: '8:00 AM'},
+  { id: 10, title: 'children convention service, last Sunday of May.', date: 'Every May', time: '8:00 AM'},
+  { id: 11, title: 'New Creation Reality Institute, a discipleship class for believers in Christ. It is an interdenominational class to equip believers for the entire revival. It operates five quarters of intensive teaching in a year', date: 'April, May, August, September, and December.', time: '8:00 AM'},
 ];
 
 const ministries = [

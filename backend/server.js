@@ -36,7 +36,7 @@ function saveSubmissions(data) {
 const events = [
   { id: 1, title: 'Covenant Worship Service', date: 'Every Sunday', time: '8:00 AM - 11:00 AM', category: 'Worship', location: 'Mercy Arena Main Auditorium' },
   { id: 2, title: 'Bible Study and Prayer Meeting', date: 'Wednesday, 5:00 PM', time: '5:00 PM - 6:30 PM', category: 'Prayer', location: 'Mercy Arena' },
-  { id: 3, title: 'First day of every month, Destiny morning, 5 a.m. to 6 a.m. In bracket, house prayers for every member of Rulers Assembly, bracket closed.', date: 'First Day of the Month', time: '6:00 AM'},
+  { id: 3, title: 'Destiny morning, 5 a.m. to 6 a.m (house prayers for every member of Rulers Assembly)', date: 'First Day of the Month', time: '6:00 AM'},
   { id: 4, title: 'Every first Saturday, Divine Encounter Service. We engage in prayer and fasting', date: 'Every First Saturday', time: '9:00 AM - 12 PM'},
   { id: 5, title: 'Two weeks of annual spiritual emphasis, prayer and fasting, every September.', date: 'Every September', time: '6:00 AM'},
   { id: 6, title: 'Hosanna Service, the last Sunday of September.', date: 'Last Sunday of September', time: '8:00 AM'},
